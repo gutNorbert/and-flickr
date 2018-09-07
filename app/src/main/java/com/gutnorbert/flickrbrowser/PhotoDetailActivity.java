@@ -1,6 +1,7 @@
 package com.gutnorbert.flickrbrowser;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,10 +26,13 @@ public class PhotoDetailActivity extends BaseActivity {
         Photo photo = (Photo) intent.getSerializableExtra(PHOTO_TRANSFER);
         if (photo != null){
             TextView photoTitle = findViewById(R.id.photo_title);
-            photoTitle.setText("Title: " + photo.getTitle());
+            Resources resources = getResources();
+            String text = resources.getString(R.string.photo_title_text);
+            photoTitle.setText(text);
+//            photoTitle.setText("Title: " + photo.getTitle());
 
             TextView photoTags = findViewById(R.id.photo_tags);
-            photoTags.setText("Tags: " + photo.getTitle());
+//            photoTags.setText("Tags: " + photo.getTitle());
 
             TextView photoAuthor = findViewById(R.id.photo_author);
             photoAuthor.setText(photo.getAuthor());
