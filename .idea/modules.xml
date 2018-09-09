@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/and-flickr-master.iml" filepath="$PROJECT_DIR$/and-flickr-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/and-flickr.iml" filepath="$PROJECT_DIR$/and-flickr.iml" />
+      <module fileurl="file://C:\_Programming\Android\Java\Flickr\and-flickr\and-flickr-master.iml" filepath="C:\_Programming\Android\Java\Flickr\and-flickr\and-flickr-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\_Programming\Android\Java\Flickr\and-flickr\app\app.iml" filepath="C:\_Programming\Android\Java\Flickr\and-flickr\app\app.iml" />
     </modules>
   </component>
 </project>
