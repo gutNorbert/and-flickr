@@ -34,11 +34,23 @@ public class SearchActivity extends BaseActivity {
         mSearchView = (SearchView) menu.findItem(R.id.app_bar_search).getActionView();
         SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
         mSearchView.setSearchableInfo(searchableInfo);
-        Log.d(TAG, "onCreateOptionsMenu: " + getComponentName().toString());
-        Log.d(TAG, "onCreateOptionsMenu: hint is " + mSearchView.getQueryHint());
-        Log.d(TAG, "onCreateOptionsMenu: searchable info is " + searchableInfo.toString());
 
-        mSearchView.setIconified(true);
+        mSearchView.setIconified(false);
+
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                Log.d(TAG, "onQueryTextSubmit: called");
+                mSearchView.clearFocus();
+                finish();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
 
         Log.d(TAG, "onCreateOptionsMenu: returned " + true);
 
